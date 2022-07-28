@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lamp-docker</title>
+    <title>Task Manager</title>
 </head>
 <body>
 
 <header>
     <nav>
-        <li><a href="./">Home</a></li>
+        <a href="/">Homepage</a>
+        <a href="../about.php">About</a>
+        <a href="../contact.php">Contact Us</a>
     </nav>
-    <h1>Lamp stack with Docker</h1>
 </header>

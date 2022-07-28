@@ -1,15 +1,11 @@
 <?php
 
-require_once("connexion.php");
-
-include "includes/header.php";
-
-phpinfo();
-
-?>
+$query = require "bootstrap.php";
 
 
+$tasks = $query->selectAll('todos');
 
-<?php
-    include "includes/footer.php";
-?>
+
+require "index.view.php";
+
+
