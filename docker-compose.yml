@@ -1,0 +1,31 @@
+---
+  version: "3"
+  services: 
+    php: 
+      build: "./"
+      volumes: 
+        - "./www:/var/www/html"
+      ports: 
+        - "80:80"
+    mysql: 
+      image: "mariadb"
+      restart: "unless-stopped"
+      volumes: 
+        - "mysql_db:/var/lib/mysql"
+      ports: 
+        - "3306:3306"
+        - "33060:33060"
+      environment: 
+        MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+    phpmyadmin: 
+      image: "phpmyadmin/phpmyadmin"
+      ports: 
+        - "8001:80"
+      depends_on: 
+        - "mysql" 
+      environment: 
+        PMA_HOST: "${PMA_HOST}"
+        PMA_USER: "${PMA_USER}"
+        PMA_PASSWORD: "${PMA_PASSWORD}"
+  volumes: 
+    mysql_db: 
