@@ -4,8 +4,9 @@
 
 $config = require "config.php";
 
-require "database/Connexion.php";
-require "database/QueryBuilder.php";
+require 'core/Router.php';
+require "core/database/Connexion.php";
+require "core/database/QueryBuilder.php";
 require "functions.php";
 
 return $query = new QueryBuilder(

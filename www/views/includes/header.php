@@ -10,7 +10,7 @@
 <header>
     <nav>
         <a href="/">Homepage</a>
-        <a href="../about.php">About</a>
-        <a href="../contact.php">Contact Us</a>
+        <a href="views/about.view.php">About</a>
+        <a href="views/contact.view.php">Contact Us</a>
     </nav>
 </header>
