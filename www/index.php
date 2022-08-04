@@ -1,14 +1,20 @@
 <?php
 
-$query = require "core/bootstrap.php";
+echo "hello";
+
+require "core/bootstrap.php";
+
+##$query =
+
 
 $router = new Router;
 
 require 'routes.php';
 
-dd($_SERVER);
+$router->direct($_SERVER['PHP_SELF']);
+
+dd($_SERVER['REQUEST_URI']);
 dd($router->direct($_SERVER['REQUEST_URI']));
 
-$router->direct('about');
 
 
